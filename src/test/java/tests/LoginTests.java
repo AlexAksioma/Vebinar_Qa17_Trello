@@ -19,7 +19,7 @@ public class LoginTests extends TestBase {
     public void loginSuccess() {
 
         app.user().initLogin();
-        app.user().fillLoginForm("hatum.testing@gmail.com", "Hatum21$");
+        app.user().fillLoginForm("alexmedqwerty2@gmail.com","376Vtl150dtl!");
         app.user().submitLogin();
         Assert.assertTrue(app.user().isLogged());
 
@@ -27,7 +27,7 @@ public class LoginTests extends TestBase {
 
     @Test
     public void loginSuccessModels() {
-        User user = new User().withEmail("hatum.testing@gmail.com").withPassword("Hatum21$");
+        User user = new User().withEmail("alexmedqwerty2@gmail.com").withPassword("376Vtl150dtl!");
 //        user.setEmail("a");
 //        user.setPassword("b");
 
@@ -41,7 +41,7 @@ public class LoginTests extends TestBase {
 
     @Test
     public void loginNegativeWrongEmailModels() {
-        User user = new User().withEmail("hatum.testinggmail.com").withPassword("Hatum21$");
+        User user = new User().withEmail("alexmedqwerty2gmail.com").withPassword("376Vtl150dtl!");
         app.user().initLogin();
         app.user().fillLoginForm(user);
         app.user().submitLoginError();
@@ -52,7 +52,7 @@ public class LoginTests extends TestBase {
     }
     @Test
     public void loginNegativeWrongPasswordModels() {
-        User user = new User().withEmail("hatum.testing@gmail.com").withPassword("Hat");
+        User user = new User().withEmail("alexmedqwerty2@gmail.com").withPassword("Vtl150dtl!");
         app.user().initLogin();
         app.user().fillLoginForm(user);
         app.user().submitLogin();
